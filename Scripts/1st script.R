@@ -27,3 +27,19 @@ peaksCount(aa,10)
 
 
 plot(pl[,1], pl[,2], type="h", lwd=1)
+
+
+fls <- msdata::proteomics(full.names = TRUE)
+
+basename(fls)
+
+fl <- fls[2]
+
+fl
+
+rw <- mzR::openMSfile(fl)
+
+rw
+sp1 <- mzR::spectra(rw,1)
+
+head(sp1)
